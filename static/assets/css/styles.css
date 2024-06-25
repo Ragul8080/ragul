@@ -94,6 +94,8 @@ img {
   display: block;
 }
 
+
+
 /* CUSTOM CSS CLASSES */
 
 /* LAYOUT */
@@ -141,6 +143,10 @@ img {
   }
 }
 
+.nav_items a {
+  text-decoration: none;
+}
+
 .nav_items {
   margin-bottom: var(--mb-4);
 }
@@ -151,7 +157,7 @@ img {
 }
 
 .nav_link:hover {
-  color: #ff0000;
+  color: #ff006a;
   position: relative;
 }
 
@@ -291,6 +297,11 @@ img {
   color: #ff0077;
 }
 
+.about_container bd_grid{
+  width: 100%;
+  align-items: center;
+  font-size: xx-large;
+}
 .about_img {
   justify-content: center;
 }
@@ -304,6 +315,9 @@ img {
 .skills_container {
   row-gap: 2rem;
   text-align: center;
+}
+.skills_container {
+  border: #4070f4;
 }
 
 .skills_subtitle {
@@ -321,14 +335,14 @@ img {
   align-items: center;
   position: relative;
   font-weight: var(--font-semi);
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
   margin-bottom: var(--mb-4);
-  border-radius: 0.5rem;
+  border-radius: 0.9rem;
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
 }
 
 .skill_icon {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-right: var(--mb-2);
   color:rgb(255, 0, 98);
 }
