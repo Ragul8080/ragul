@@ -1,4 +1,4 @@
-/* Google Font - Poppins */
+ /* Google Font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* Variables */
 :root {
@@ -252,6 +252,60 @@ img {
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
   background: var(--gardient-color);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+.button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--gardient-color);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow */
+.button::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.button:hover::before {
+  opacity: 1;
+}
+
+.button:active:after {
+  background: transparent;
+}
+
+.button:active {
+  color: #000;
+  font-weight: bold;
 }
 
 .button:hover {
@@ -338,7 +392,7 @@ img {
   padding: 0.8rem 1rem;
   margin-bottom: var(--mb-4);
   border-radius: 0.9rem;
-  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  box-shadow: 0 4px 25px rgba(59, 46, 247, 0.15);
 }
 
 .skill_icon {
