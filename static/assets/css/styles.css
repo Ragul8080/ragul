@@ -257,6 +257,17 @@ img {
   z-index: 0;
   text-decoration: none;
 }
+.button1 {
+  color: #fff;
+  padding: 0.35rem 2.5rem;
+  font-weight: var(--font-semi);
+  border-radius: 0.5rem;
+  background: var(--gardient-color);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  text-decoration: none;
+}
 .button::after {
   content: "";
   z-index: -1;
